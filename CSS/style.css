@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "quantam";
+    src: url(../Font/Quantum.otf);
+}
+
+body {
+    background-color: #000000;
+}
