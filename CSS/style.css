@@ -6,8 +6,136 @@
 }
 
 body {
-  /* background-color: #000000; */
+  background-color: #000000;
 }
 
 @media screen and (max-width: 375px) {
+  .header-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10vw 8vw 10vw 8vw;
+  }
+
+  .about-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-container {
+    max-width: 60vw;
+    margin: 20vw auto 0% auto;
+    color: #1CF3F3;
+    font-family: quantam,YuMincho;
+  }
+
+  .about-name {
+    margin-top: 15vw;
+  }
+
+  .about-name h1 {
+    font-size: 8vw;
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+
+  .about-name p {
+    text-align: center;
+    padding-right: 2vw;
+  }
+
+  .about-profile {
+    text-align: center;
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+  }
+
+  .about-profile img {
+    border: solid;
+  }
+
+  .about-text {
+    line-height: 8vw;
+    margin-bottom: 10vw;
+    color: #ffffff;
+  }
+
+  .skill-image {
+    margin-top: 25vw;
+    margin-bottom: 25vw;
+  }
+
+.skill-container {
+  max-width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+  color: #1CF3F3;
+  font-family: YuMincho;
+}
+
+.skill-container img {
+  margin: 8vw;
+}
+
+.skill-container h1 {
+  margin-bottom: 6vw;
+  font-size: 6vw;
+}
+
+.skill-container p {
+  margin-bottom: 6vw;
+  color: #ffffff;
+  line-height: 8vw;
+}
+
+.html-css, .jquery, .xd, .photoshop, .figma {
+  margin-bottom: 20vw; 
+}
+
+  .star5_rating {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #cccccc; /* グレーカラー 自由に設定化 */
+  }
+  
+  .star5_rating:before,
+  .star5_rating:after {
+    content: "★★☆☆☆";
+    font-size: 8vw;
+  }
+  
+  .star5_rating:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
+  }
+
+
+  .star5_rating_2 {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #cccccc; /* グレーカラー 自由に設定化 */
+  }
+  
+  .star5_rating_2:before,
+  .star5_rating_2:after {
+    content: "★★☆☆☆";
+    font-size: 7vw;
+  }
+  
+  .star5_rating_2:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
 }
