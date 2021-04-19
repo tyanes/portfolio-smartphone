@@ -71,9 +71,12 @@ body {
   color: #1CF3F3;
   font-family: YuMincho;
 }
+.html-css img {
+  width: 30vw;
+}
 
 .skill-container img {
-  margin: 8vw;
+  margin: 6vw;
 }
 
 .skill-container h1 {
@@ -101,7 +104,7 @@ body {
   
   .star5_rating:before,
   .star5_rating:after {
-    content: "★★☆☆☆";
+    content: "★★★☆☆";
     font-size: 8vw;
   }
   
@@ -138,4 +141,60 @@ body {
     overflow: hidden;
     white-space: nowrap;
     color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.works-container {
+  color: #1CF3F3;
+  font-family: YuMincho;
+  max-width: 60vw;
+  margin: 20vw auto;
+  text-align: center;}
+
+
+.works-name h1 {
+  font-size: 5vw;
+  margin-bottom: 5vw;
+}
+
+.works-name p {
+  color: #ffffff;
+  font-size: 6vw;
+}
+
+.works-image-2 {
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+}
+
+.works-image-2 img {
+  border: solid 1vw;
+}
+
+.works-url h1 {
+  font-size: 5vw;
+  margin-bottom: 5vw;
+}
+
+.works-url a {
+  margin: 0%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 5vw;
+}
+
+.works-text h1 {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.works-text p {
+  line-height: 6vw;
+  color: #ffffff;
+}
+
+.copy-light {
+  color: #1CF3F3;
+  margin-top: 30vw;
+  font-size: 4vw;
+  text-align: center;
 }
