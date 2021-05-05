@@ -9,517 +9,596 @@ body {
   background-color: #000000;
 }
 
-@media screen and (max-width: 375px) {
+body p {
+  font-size: 4vw;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10vw 8vw 10vw 8vw;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-container {
+  max-width: 65vw;
+  word-break: break-all;
+  margin: 20vw auto 0% auto;
+  color: #1cf3f3;
+  font-family: quantam, YuMincho;
+}
+
+.about-name {
+  margin-top: 15vw;
+}
+
+.about-name h1 {
+  font-size: 6vw;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+.about-name p {
+  text-align: center;
+  padding-right: 1vw;
+}
+
+.about-profile {
+  text-align: center;
+  margin-top: 15vw;
+  margin-bottom: 15vw;
+}
+
+.about-profile img {
+  border: solid;
+}
+
+.about-text {
+  line-height: 8vw;
+  margin-bottom: 10vw;
+  color: #ffffff;
+  font-family: YuMincho;
+}
+
+.skill-image {
+  margin-top: 25vw;
+  margin-bottom: 25vw;
+}
+
+.skill-container {
+  max-width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+  word-break: break-all;
+  color: #1cf3f3;
+  font-family: YuMincho;
+}
+
+.html-css img {
+  width: 30vw;
+}
+
+.skill-container img {
+  margin: 6vw;
+}
+
+.skill-container h1 {
+  margin-bottom: 6vw;
+  font-size: 5vw;
+}
+
+.skill-container p {
+  margin-bottom: 6vw;
+  color: #ffffff;
+  line-height: 8vw;
+}
+
+.skill-container .skill-text {
+  text-align: left;
+}
+
+.html-css,
+.jquery,
+.xd,
+.photoshop,
+.figma {
+  margin-bottom: 20vw;
+}
+
+.star5_rating {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #cccccc; /* グレーカラー 自由に設定化 */
+}
+
+.star5_rating:before,
+.star5_rating:after {
+  content: "★★★☆☆";
+  font-size: 6vw;
+}
+
+.star5_rating:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating_2 {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #cccccc; /* グレーカラー 自由に設定化 */
+}
+
+.star5_rating_2:before,
+.star5_rating_2:after {
+  content: "★★☆☆☆";
+  font-size: 6vw;
+}
+
+.star5_rating_2:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.works-container {
+  color: #1cf3f3;
+  font-family: YuMincho;
+  max-width: 60vw;
+  margin: 20vw auto;
+  text-align: center;
+}
+
+.works-name h1 {
+  font-size: 4vw;
+  margin-bottom: 5vw;
+}
+
+.works-name p {
+  color: #ffffff;
+  font-size: 5vw;
+}
+
+.works-image-2 {
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+}
+
+.works-image-2 img {
+  border: solid 1vw;
+}
+
+.works-url h1 {
+  font-size: 4vw;
+  margin-top: 15vw;
+  margin-bottom: 5vw;
+}
+
+.works-url a {
+  margin: 0%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 4vw;
+}
+
+.works-text h1 {
+  margin-top: 15vw;
+  margin-bottom: 5vw;
+}
+
+.works-text p {
+  line-height: 8vw;
+  color: #ffffff;
+}
+
+.copy-light {
+  color: #1cf3f3;
+  margin-top: 30vw;
+  font-size: 4vw;
+  text-align: center;
+  font-family: quantam, YuMincho;
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+/*アクティブになったエリア*/
+#g-nav.panelactive {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg {
+  position: fixed;
+  z-index: 3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: black;
+  border: #1cf3f3 solid 1vw;
+  /*丸のスタート位置と形状*/
+  transform: scale(0); /*scaleをはじめは0に*/
+  top: calc(50% - 50px); /*50%から円の半径を引いた値*/
+  left: calc(50% - 50px); /*50%から円の半径を引いた値*/
+  transition: all 0.6s; /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive {
+  transform: scale(50); /*クラスが付与されたらscaleを拡大*/
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list {
+  display: none; /*はじめは表示なし*/
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list {
+  display: block; /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  opacity: 0; /*はじめは透過0*/
+  /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+  opacity: 1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panelactive ul li {
+  animation-name: gnaviAnime;
+  animation-duration: 1s;
+  animation-delay: 0.2s; /*0.2 秒遅らせて出現*/
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes gnaviAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*リストのレイアウト設定*/
+#g-nav li {
+  text-align: center;
+  margin: 0 auto;
+  list-style: none;
+}
+
+#g-nav li a {
+  color: #1cf3f3;
+  font-family: quantam;
+  text-decoration: none;
+  margin: 10vw;
+  font-size: 5vw;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1 {
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  z-index: 9999; /*ボタンを最前面に*/
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+/*×に変化*/
+.openbtn1 span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #1cf3f3;
+  width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*========= ページトップのためのCSS ===============*/
+
+/*スクロールリンクの形状*/
+.scroll-top {
+  /*表示位置*/
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s; /*それぞれに0.5秒の変化のアニメーション*/
+  /*縦書き*/
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  /*改行禁止*/
+  white-space: nowrap;
+  /*矢印の動き*/
+  animation: arrowmove 1s ease-in-out infinite;
+}
+
+@keyframes arrowmove {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+/*.scroll-viewクラスがついたら出現*/
+.scroll-top.scroll-view {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*リンク全体の aタグの形状*/
+.scroll-top a {
+  text-decoration: none;
+  color: #1cf3f3;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+}
+
+/*スクロールリンクの形状*/
+
+.js-scroll a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #1cf3f3;
+}
+
+.js-scroll a::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background: #1cf3f3;
+  transform: skewX(-31deg);
+}
+
+/*ページトップリンクの形状*/
+
+.js-pagetop a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #1cf3f3;
+}
+
+.js-pagetop a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background: #1cf3f3;
+  transform: skewX(31deg);
+}
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  text-align: center;
+  color: #1cf3f3;
+}
+
+/* Loading画像中央配置　*/
+#splash_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  color: #1cf3f3;
+  width: 100%;
+}
+
+/*割れる画面のアニメーション*/
+.loader_cover {
+  width: 100%;
+  height: 50%;
+  background-color: #000000;
+  transition: all 0.1s cubic-bezier(0.04, 0.435, 0.315, 0.9);
+  transform: scaleY(1);
+}
+/*上の画面*/
+.loader_cover-up {
+  transform-origin: center top;
+}
+
+/*下の画面*/
+.loader_cover-down {
+  position: absolute;
+  bottom: 0;
+  transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+.coveranime {
+  transform: scaleY(0);
+}
+
+@media screen and (min-width: 768px) {
+  /*タブレット用として画面幅を768pxまでに設定*/
   body p {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
-  .header-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin: 10vw 8vw 10vw 8vw;
-  }
-
-  .about-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .about-container {
-    max-width: 60vw;
-    margin: 20vw auto 0% auto;
-    color: #1cf3f3;
-    font-family: quantam, YuMincho;
-  }
-
-  .about-name {
-    margin-top: 15vw;
-  }
-
-  .about-name h1 {
-    font-size: 6vw;
-    text-align: center;
-    margin-bottom: 5vw;
-  }
-
-  .about-name p {
-    text-align: center;
-    padding-right: 1vw;
-  }
-
-  .about-profile {
-    text-align: center;
-    margin-top: 15vw;
-    margin-bottom: 15vw;
+  .about-image img {
+    width: 100vw;
   }
 
   .about-profile img {
-    border: solid;
+    width: 40vw;
   }
 
-  .about-text {
-    line-height: 8vw;
-    margin-bottom: 10vw;
-    color: #ffffff;
+  .skill-image img {
+    width: 100vw;
   }
 
-  .skill-image {
-    margin-top: 25vw;
-    margin-bottom: 25vw;
-  }
-
-  .skill-container {
-    max-width: 60vw;
-    margin: 0 auto;
-    text-align: center;
-    color: #1cf3f3;
-    font-family: YuMincho;
+  .works-image img {
+    width: 100vw;
   }
 
   .html-css img {
-    width: 30vw;
+    width: 25vw;
   }
 
-  .skill-container img {
-    margin: 6vw;
+  .photoshop img {
+    width: 15vw;
   }
 
-  .skill-container h1 {
-    margin-bottom: 6vw;
-    font-size: 5vw;
+  .figma img {
+    width: 8vw;
   }
 
-  .skill-container p {
-    margin-bottom: 6vw;
-    color: #ffffff;
-    line-height: 8vw;
+  .jquery img {
+    width: 15vw;
   }
 
-  .html-css,
-  .jquery,
-  .xd,
-  .photoshop,
-  .figma {
-    margin-bottom: 20vw;
-  }
-
-  .star5_rating {
-    position: relative;
-    z-index: 0;
-    display: inline-block;
-    white-space: nowrap;
-    color: #cccccc; /* グレーカラー 自由に設定化 */
+  .xd img {
+    width: 15vw;
   }
 
   .star5_rating:before,
   .star5_rating:after {
     content: "★★★☆☆";
-    font-size: 6vw;
-  }
-
-  .star5_rating:after {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #ffcf32; /* イエローカラー 自由に設定化 */
-  }
-
-  .star5_rating_2 {
-    position: relative;
-    z-index: 0;
-    display: inline-block;
-    white-space: nowrap;
-    color: #cccccc; /* グレーカラー 自由に設定化 */
+    font-size: 5vw;
   }
 
   .star5_rating_2:before,
   .star5_rating_2:after {
     content: "★★☆☆☆";
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
-  .star5_rating_2:after {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #ffcf32; /* イエローカラー 自由に設定化 */
+  .skill-container h1 {
+    font-size: 4vw;
   }
 
-  .works-container {
-    color: #1cf3f3;
-    font-family: YuMincho;
-    max-width: 60vw;
-    margin: 20vw auto;
-    text-align: center;
+  .skill-container {
+    max-width: 55vw;
   }
 
   .works-name h1 {
-    font-size: 4vw;
-    margin-bottom: 5vw;
+    font-size: 3.5vw;
   }
 
   .works-name p {
-    color: #ffffff;
-    font-size: 5vw;
-  }
-
-  .works-image-2 {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+    font-size: 4vw;
   }
 
   .works-image-2 img {
-    border: solid 1vw;
+    width: 45vw;
   }
 
   .works-url h1 {
-    font-size: 4vw;
-    margin-top: 15vw;
-    margin-bottom: 5vw;
-  }
-
-  .works-url a {
-    margin: 0%;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
   .works-text h1 {
-    margin-top: 15vw;
-    margin-bottom: 5vw;
-  }
-
-  .works-text p {
-    line-height: 6vw;
-    color: #ffffff;
-  }
-
-  .copy-light {
-    color: #1cf3f3;
-    margin-top: 30vw;
-    font-size: 4vw;
-    text-align: center;
-    font-family: quantam, YuMincho;
-  }
-
-  /*========= ナビゲーションのためのCSS ===============*/
-
-  /*アクティブになったエリア*/
-  #g-nav.panelactive {
-    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-  }
-
-  /*丸の拡大*/
-  .circle-bg {
-    position: fixed;
-    z-index: 3;
-    /*丸の形*/
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: black;
-    border: #1cf3f3 solid 1vw;
-    /*丸のスタート位置と形状*/
-    transform: scale(0); /*scaleをはじめは0に*/
-    top: calc(50% - 50px); /*50%から円の半径を引いた値*/
-    left: calc(50% - 50px); /*50%から円の半径を引いた値*/
-    transition: all 0.6s; /*0.6秒かけてアニメーション*/
-  }
-
-  .circle-bg.circleactive {
-    transform: scale(50); /*クラスが付与されたらscaleを拡大*/
-  }
-
-  /*ナビゲーションの縦スクロール*/
-  #g-nav-list {
-    display: none; /*はじめは表示なし*/
-    /*ナビの数が増えた場合縦スクロール*/
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  #g-nav.panelactive #g-nav-list {
-    display: block; /*クラスが付与されたら出現*/
-  }
-
-  /*ナビゲーション*/
-  #g-nav ul {
-    opacity: 0; /*はじめは透過0*/
-    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
-    position: absolute;
-    z-index: 999;
-    top: 50%;
-    left: 58%;
-    transform: translate(-50%, -50%);
-  }
-
-  /*背景が出現後にナビゲーションを表示*/
-  #g-nav.panelactive ul {
-    opacity: 1;
-  }
-
-  /* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
-  #g-nav.panelactive ul li {
-    animation-name: gnaviAnime;
-    animation-duration: 1s;
-    animation-delay: 0.2s; /*0.2 秒遅らせて出現*/
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
-  @keyframes gnaviAnime {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /*リストのレイアウト設定*/
-  #g-nav li {
-    text-align: center;
-    margin: 0 auto;
-    list-style: none;
+    font-size: 3.5vw;
   }
 
   #g-nav li a {
-    color: #1cf3f3;
-    font-family: quantam;
-    text-decoration: none;
-    margin: 10vw;
-    font-size: 5vw;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 3.5vw;
   }
+}
 
-  /*========= ボタンのためのCSS ===============*/
-  .openbtn1 {
-    position: fixed;
-    top: 15px;
-    right: 10px;
-    z-index: 9999; /*ボタンを最前面に*/
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-  }
-
-  /*×に変化*/
-  .openbtn1 span {
-    display: inline-block;
-    transition: all 0.4s;
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: #1cf3f3;
-    width: 45%;
-  }
-
-  .openbtn1 span:nth-of-type(1) {
-    top: 15px;
-  }
-
-  .openbtn1 span:nth-of-type(2) {
-    top: 23px;
-  }
-
-  .openbtn1 span:nth-of-type(3) {
-    top: 31px;
-  }
-
-  .openbtn1.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-  }
-
-  .openbtn1.active span:nth-of-type(2) {
-    opacity: 0;
-  }
-
-  .openbtn1.active span:nth-of-type(3) {
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-  }
-
-  /*========= ページトップのためのCSS ===============*/
-
-  /*スクロールリンクの形状*/
-  .scroll-top {
-    /*表示位置*/
-    position: fixed;
-    right: 30px;
-    bottom: 10px;
-    z-index: 2;
-    /*はじめは非表示*/
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s, visibility 0.5s; /*それぞれに0.5秒の変化のアニメーション*/
-    /*縦書き*/
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    /*改行禁止*/
-    white-space: nowrap;
-    /*矢印の動き*/
-    animation: arrowmove 1s ease-in-out infinite;
-  }
-
-  @keyframes arrowmove {
-    0% {
-      bottom: 20px;
-    }
-    50% {
-      bottom: 25px;
-    }
-    100% {
-      bottom: 20px;
-    }
-  }
-
-  /*.scroll-viewクラスがついたら出現*/
-  .scroll-top.scroll-view {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /*リンク全体の aタグの形状*/
-  .scroll-top a {
-    text-decoration: none;
-    color: #1cf3f3;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    display: block;
-  }
-
-  /*スクロールリンクの形状*/
-
-  .js-scroll a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 50px;
-    background: #1cf3f3;
-  }
-
-  .js-scroll a::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    right: -6px;
-    width: 1px;
-    height: 20px;
-    background: #1cf3f3;
-    transform: skewX(-31deg);
-  }
-
-  /*Edge IE11 hack*/
-  _:-ms-lang(x),
-  .js-scroll a::before {
-    right: -11px;
-  }
-
-  /*ページトップリンクの形状*/
-
-  .js-pagetop a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 50px;
-    background: #1cf3f3;
-  }
-
-  .js-pagetop a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -6px;
-    width: 1px;
-    height: 20px;
-    background: #1cf3f3;
-    transform: skewX(31deg);
-  }
-
-  /*Edge IE11 hack*/
-  _:-ms-lang(x),
-  .js-pagetop a::before {
-    right: 0;
-  }
-
-  /*========= LoadingのためのCSS ===============*/
-
-  /* Loading背景画面設定　*/
-  #splash {
-    /*fixedで全面に固定*/
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    text-align: center;
-    color: #1cf3f3;
-  }
-
-  /* Loading画像中央配置　*/
-  #splash_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 999;
-    transform: translate(-50%, -50%);
-    color: #1cf3f3;
-    width: 100%;
-  }
-
-  /*IE11対策用バーの線の高さ※対応しなければ削除してください*/
-  #splash_text svg {
-    height: 2px;
-  }
-
-  /*割れる画面のアニメーション*/
-  .loader_cover {
-    width: 100%;
-    height: 50%;
-    background-color: #000000;
-    transition: all 0.2s cubic-bezier(0.04, 0.435, 0.315, 0.9);
-    transform: scaleY(1);
-  }
-  /*上の画面*/
-  .loader_cover-up {
-    transform-origin: center top;
-  }
-
-  /*下の画面*/
-  .loader_cover-down {
-    position: absolute;
-    bottom: 0;
-    transform-origin: center bottom;
-  }
-  /*クラス名がついたらY軸方向に0*/
-  .coveranime {
-    transform: scaleY(0);
-  }
+@media screen and (min-width: 1024px) {
+  /*PC用として画面幅を1024pxまでに設定*/
 }

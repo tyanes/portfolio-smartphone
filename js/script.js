@@ -16,7 +16,7 @@ $("#g-nav a").click(function () {
   $(".circle-bg").removeClass("circleactive"); //丸背景のcircleactiveクラスを除去
 });
 
-//スクロールした際の動きを関数でまとめるa
+//スクロールした際の動きを関数でまとめる
 function PageTopCheck() {
   var winScrollTop = $(window).scrollTop();
   var secondTop = $("#skills").offset().top - 150; //#area-2の上から150pxの位置まで来たら
@@ -69,7 +69,7 @@ var bar = new ProgressBar.Line(splash_text, {
       left: "50%",
       top: "50%",
       padding: "0",
-      margin: "-30px 0 0 0", //バーより上に配置
+      margin: "-50px 0 0 0", //バーより上に配置
       transform: "translate(-50%,-50%)",
       "font-size": "1.4rem",
       "font-family": "quantam",
