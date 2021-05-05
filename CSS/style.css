@@ -204,6 +204,7 @@ body p {
 
 .works-text p {
   line-height: 8vw;
+  text-align: left;
   color: #ffffff;
 }
 
