@@ -24,6 +24,11 @@ body p {
   height: auto;
 }
 
+/* スマホサイトでは表示しない */
+.pc-img {
+  display: none;
+}
+
 .about-container {
   max-width: 65vw;
   word-break: break-all;
@@ -602,4 +607,20 @@ body p {
 
 @media screen and (min-width: 1024px) {
   /*PC用として画面幅を1024pxまでに設定*/
+
+  /* スマホ用画像を表示しない */
+  .sp-img {
+    display: none !important;
+  }
+
+  /* PC用のサイズに差し替える */
+  .pc-img {
+    display: block !important;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .header-menu {
+    margin-bottom: 0%;
+  }
 }

@@ -90,3 +90,5 @@ bar.animate(1.0, function () {
   $(".loader_cover-down").addClass("coveranime"); //カバーが下に下がるクラス追加
   $("#splash").fadeOut(); //#splashエリアをフェードアウト
 });
+
+
